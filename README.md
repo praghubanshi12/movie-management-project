@@ -24,10 +24,10 @@ Go to client folder, and run these 2 command sequentially :
     * **Request Body** :
       *  ```
          {
-            "movie_name": "Joker", /*(Type => string, Validations => minimiun length = 2, maximum length = 255)*/
-            "year_of_release": <integer> 2024, *(Validations => minimiun value = 1000, maximum value = 2100)*
-            "genre": <string> "Drama", *(Validations => minimiun length = 2, maximum length = 255)*
-            "image": <base64 image> "**base64 path**", *(Maximum Acceptable File Size => 2MB, Acceptable Extensions => png,jpeg,jpg,svg,webp,jfif)*
+            "movie_name": "Joker", /*(Type : string, Validations : minimiun length = 2, maximum length = 255)*/
+            "year_of_release": 2024, /*(Type: integer, Validations : minimiun value = 1000, maximum value = 2100)*/
+            "genre": "Drama", /*(Type: string, Validations : minimiun length = 2, maximum length = 255)*/
+            "image": "**base64 path**", /*(Type : Base64 Image, Validations : Maximum Acceptable File Size => 2MB, Acceptable Extensions => png,jpeg,jpg,svg,webp,jfif)*/
          }
          ```
 
@@ -37,12 +37,14 @@ Go to client folder, and run these 2 command sequentially :
     * The "id" path variable in the url represents the line number of the record, to be updated in csv file.
     * The "id" is fetched from the GET request of http://localhost:8000/movies.php
     * **Request Body** :
-      *  {
-            "movie_name": <string> "Joker", *(Validations => minimiun length = 2, maximum length = 255)*
-            "year_of_release": <integer> 2024, *(Validations => minimiun value = 1000, maximum value = 2100)*
-            "genre": <string> "Drama", *(Validations => minimiun length = 2, maximum length = 255)*
-            "image": <base64 image> "**base64 path**", *(Maximum Acceptable File Size => 2MB, Acceptable Extensions => png,jpeg,jpg,svg,webp,jfif)*
+      *  ```
+         {
+            "movie_name": "Joker", /*(Type : string, Validations : minimiun length = 2, maximum length = 255)*/
+            "year_of_release": 2024, /*(Type: integer, Validations : minimiun value = 1000, maximum value = 2100)*/
+            "genre": "Drama", /*(Type: string, Validations : minimiun length = 2, maximum length = 255)*/
+            "image": "**base64 path**", /*(Type : Base64 Image, Validations : Maximum Acceptable File Size => 2MB, Acceptable Extensions => png,jpeg,jpg,svg,webp,jfif)*/
          }
+         ```
 
 * **API Link** : (DELETE) http://localhost:8000/movies.php/{id}
   * **Description** :
