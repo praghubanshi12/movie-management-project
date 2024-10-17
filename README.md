@@ -12,8 +12,38 @@ Go to client folder, and run these 2 command sequentially :
 
 ## API documentation
 
-* **API Link** : http://localhost:8000/movies.php?page=1&limit=15
+* **API Link** : (GET) http://localhost:8000/movies.php?page=1&limit=15
   * **Description** :
     * This is a GET Request
     * for pagination of movies data, "limit" parameter sets the limit of records to be sent from the api, and "page" defines the page number
     * default values for query parameters for page & limit are 1 & 15 respectively
+   
+* **API Link** : (POST) http://localhost:8000/movies.php
+  * **Description** :
+    * This is a POST Request, of type JSON
+    * **Request Body** :
+      *  {
+            "movie_name": <string> "Joker", (Validations => minimiun length = 2, maximum length = 255)
+            "year_of_release": <integer> 2024, (Validations => minimiun value = 1000, maximum value = 2100)
+            "genre": <string> "Drama", (Validations => minimiun length = 2, maximum length = 255)
+            "image": <base64 image> "**base64 path**", (Maximum Acceptable File Size => 2MB, Acceptable Extensions => png,jpeg,jpg,svg,webp,jfif)
+         }
+
+* **API Link** : (PUT) http://localhost:8000/movies.php/{id}
+  * **Description** :
+    * This is a PUT Request, of type JSON
+    * The "id" path variable in the url represents the line number of the record, to be updated in csv file.
+    * The "id" is fetched from the GET request of http://localhost:8000/movies.php
+    * **Request Body** :
+      *  {
+            "movie_name": <string> "Joker", (Validations => minimiun length = 2, maximum length = 255)
+            "year_of_release": <integer> 2024, (Validations => minimiun value = 1000, maximum value = 2100)
+            "genre": <string> "Drama", (Validations => minimiun length = 2, maximum length = 255)
+            "image": <base64 image> "**base64 path**", (Maximum Acceptable File Size => 2MB, Acceptable Extensions => png,jpeg,jpg,svg,webp,jfif)
+         }
+
+* **API Link** : (DELETE) http://localhost:8000/movies.php/{id}
+  * **Description** :
+    * This is a DELETE Request
+    * The "id" path variable in the url represents the line number of the record, to be deleted in csv file.
+    * The "id" is fetched from the GET request of http://localhost:8000/movies.php
