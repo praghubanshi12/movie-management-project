@@ -20,7 +20,7 @@ Go to client folder, and run these 2 command sequentially :
    
 * **API Link** : (POST) http://localhost:8000/movies.php
   * **Description** :
-    * This is a POST Request, of type JSON
+    * This is a POST Request, of headers Content-type JSON
     * **Request Body** :
       *  ```
          {
@@ -33,7 +33,7 @@ Go to client folder, and run these 2 command sequentially :
 
 * **API Link** : (PUT) http://localhost:8000/movies.php/{id}
   * **Description** :
-    * This is a PUT Request, of type JSON
+    * This is a PUT Request, of headers Content-type JSON
     * The "id" path variable in the url represents the line number of the record, to be updated in csv file.
     * The "id" is fetched from the GET request of http://localhost:8000/movies.php
     * **Request Body** :
