@@ -6,7 +6,8 @@ Go to server folder, and run the following command :
 * php -S localhost:8000
 
 ## For running the frontend
-Go to client folder, and run these 2 command sequentially :
+Go to client folder, and run these 3 command sequentially :
+* npm install
 * npm run build
 * npm run start
 
