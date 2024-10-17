@@ -22,12 +22,14 @@ Go to client folder, and run these 2 command sequentially :
   * **Description** :
     * This is a POST Request, of type JSON
     * **Request Body** :
-      *  ```{
-            "movie_name": <string> "Joker", (Validations => minimiun length = 2, maximum length = 255)
-            "year_of_release": <integer> 2024, (Validations => minimiun value = 1000, maximum value = 2100)
-            "genre": <string> "Drama", (Validations => minimiun length = 2, maximum length = 255)
-            "image": <base64 image> "**base64 path**", (Maximum Acceptable File Size => 2MB, Acceptable Extensions => png,jpeg,jpg,svg,webp,jfif)
-         }```
+      *  ```
+         {
+            "movie_name": <string> "Joker", *(Validations => minimiun length = 2, maximum length = 255)*
+            "year_of_release": <integer> 2024, *(Validations => minimiun value = 1000, maximum value = 2100)*
+            "genre": <string> "Drama", *(Validations => minimiun length = 2, maximum length = 255)*
+            "image": <base64 image> "**base64 path**", *(Maximum Acceptable File Size => 2MB, Acceptable Extensions => png,jpeg,jpg,svg,webp,jfif)*
+         }
+         ```
 
 * **API Link** : (PUT) http://localhost:8000/movies.php/{id}
   * **Description** :
@@ -36,10 +38,10 @@ Go to client folder, and run these 2 command sequentially :
     * The "id" is fetched from the GET request of http://localhost:8000/movies.php
     * **Request Body** :
       *  {
-            "movie_name": <string> "Joker", (Validations => minimiun length = 2, maximum length = 255)
-            "year_of_release": <integer> 2024, (Validations => minimiun value = 1000, maximum value = 2100)
-            "genre": <string> "Drama", (Validations => minimiun length = 2, maximum length = 255)
-            "image": <base64 image> "**base64 path**", (Maximum Acceptable File Size => 2MB, Acceptable Extensions => png,jpeg,jpg,svg,webp,jfif)
+            "movie_name": <string> "Joker", *(Validations => minimiun length = 2, maximum length = 255)*
+            "year_of_release": <integer> 2024, *(Validations => minimiun value = 1000, maximum value = 2100)*
+            "genre": <string> "Drama", *(Validations => minimiun length = 2, maximum length = 255)*
+            "image": <base64 image> "**base64 path**", *(Maximum Acceptable File Size => 2MB, Acceptable Extensions => png,jpeg,jpg,svg,webp,jfif)*
          }
 
 * **API Link** : (DELETE) http://localhost:8000/movies.php/{id}
